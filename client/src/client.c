@@ -49,7 +49,12 @@ int main(void)
 
 	// Creamos una conexión hacia el servidor
 	conexion = crear_conexion(ip, puerto);
-
+    if(conexion == -1) {
+    printf("NO CONECTA\n");
+    return 1;
+} else {
+    printf("CONECTADO OK\n");
+}
 	// Enviamos al servidor el valor de CLAVE como mensaje
     enviar_mensaje(valor, conexion);
 	// Armamos y enviamos el paquete

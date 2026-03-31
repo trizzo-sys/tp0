@@ -33,3 +33,4 @@ int main(void) {
 void iterator(char* value) {
 	log_info(logger,"%s", value);
 }
+
